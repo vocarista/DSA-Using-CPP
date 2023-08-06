@@ -55,7 +55,9 @@ void upSize(struct Stack* stack) {
 }
 
 void downSize(struct Stack* stack) {
-    int newMax = stack->max / 2;
+    int newMax;
+    newMax = stack->max / 2;
+    newMax = newMax > 1 ? newMax : 1;
     int *temp;
     temp = (int*)malloc(sizeof(int) * stack->max);
     copyStack(stack->a, temp, stack->max);
@@ -69,7 +71,7 @@ void downSize(struct Stack* stack) {
 void reSize(struct Stack* stack) {
     if (isFull(stack))
         upSize(stack);
-    else if (stack->top < (int)(0.25 * stack->max) - 1)
+    else if (stack->top < (int)(0.25 * (stack->max - 1)) && stack->max > 1)
         downSize(stack);
     else
         return;
