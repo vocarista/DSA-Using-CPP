@@ -47,7 +47,9 @@ void upSize(struct Stack* stack) {
     int *temp;
     temp = (int*)malloc(sizeof(int) * stack->max);
     copyStack(stack->a, temp, stack->max);
-    free(stack->a);
+    int *p = stack->a;
+    stack->a = NULL;
+    free(p);
     stack->a = (int*)malloc(sizeof(int) * newMax);
     copyStack(temp, stack->a, stack->max);
     stack->max = newMax;
@@ -61,7 +63,9 @@ void downSize(struct Stack* stack) {
     int *temp;
     temp = (int*)malloc(sizeof(int) * stack->max);
     copyStack(stack->a, temp, stack->max);
-    free(stack->a);
+    int *p = stack->a;
+    stack->a = NULL;
+    free(p);
     stack->a = (int*)malloc(sizeof(int) * newMax);
     copyStack(temp, stack->a, stack->max);
     stack->max = newMax;
