@@ -1,4 +1,4 @@
-# Data-Structures-Using-C-CPP
+# DSA-using-CPP
 This repo would contain implementations of various data structures and algorithm design methods that I'd practise while learning and revising DSA through C/C++.
 
 ## Introduction
