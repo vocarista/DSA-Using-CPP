@@ -1,4 +1,4 @@
-// Main for Singly Linked List
+// Main for Doubly Linked List
 
 #include <iostream>
 #include "DoublyList.h"
