@@ -7,8 +7,8 @@ class ListNode {
     public:
     Type val;
     ListNode* next;
-    ListNode(int val): val(val), next(NULL) {}
-    ListNode(int val, ListNode* next): val(val), next(next){}
+    ListNode(Type val): val(val), next(NULL) {}
+    ListNode(Type val, ListNode* next): val(val), next(next){}
 };
 
 template <typename Type>
